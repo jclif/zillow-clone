@@ -1,14 +1,10 @@
 <div class="center hero-unit">
   <h1>Welcome to zillow-clone</h1>
+  <h2>Why not-house when you can house? BUY HOUSES!</h2>
+  <% if current_user %>
+    <h2>Look at all these <%= link_to "Houses!!!", listings_url %> Click on them now.</h2>
 
-  <h2>
-    Look for houses, or get out! <br>Why not-house when you can house?<br> Look at all these <a href=<%= listings_url %>>houses!!!</a> Buy one!
-  </h2>
-
-  <% unless true %>
-    <%= link_to "Sign up!", root_url, class: "btn btn-large btn-primary" %>
-  <% end %>
-  <% unless current_user %>
-    <h2><%= link_to "Sign Up Now!", new_user_registration_url %></h2>
+  <% else %>
+    <h2><%= link_to "Sign Up Now!", new_user_registration_url, class: "btn btn-large btn-primary" %></h2>
   <% end %>
 </div>

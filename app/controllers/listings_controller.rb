@@ -1,10 +1,18 @@
 class ListingsController < ApplicationController
+  respond_to :html, :xml, :json
   def index
-    @listings = Listing.all
+    if params[:search].present?
+      @listings = Location.near(params[:search], 50, :order => :distance).map{ |loc| loc.listing }
+      respond_with(@listings)
+    else
+      @listings = Listing.all
+      respond_with(@listings)
+    end
   end
 
   def show
     @listing = Listing.find(params[:id])
+    respond_with(@listings)
   end
 
   def new

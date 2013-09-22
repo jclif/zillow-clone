@@ -15903,3 +15903,660 @@ Processing by ListingsController#index as HTML
   Rendered listings/index.html.erb within layouts/application (2.0ms)
   [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
 Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-21 22:50:45 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered static_pages/home.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-21 22:50:46 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-09-21 22:50:51 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"X+agNPPUcgMMY0oBvZu8sS1/TJKEzy7ccmyur+QKnDE="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 40ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-21 22:50:51 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-21 22:53:35 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-21 22:54:43 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-21 22:55:47 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-09-21 22:55:50 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/squishybear/.rvm/gems/ruby-1.9.3-p448/gems/devise-3.1.0/app/views/devise/shared/_links.erb (1.1ms)
+  Rendered /Users/squishybear/.rvm/gems/ruby-1.9.3-p448/gems/devise-3.1.0/app/views/devise/registrations/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 118ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-09-21 22:55:54 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/squishybear/.rvm/gems/ruby-1.9.3-p448/gems/devise-3.1.0/app/views/devise/shared/_links.erb (1.3ms)
+  Rendered /Users/squishybear/.rvm/gems/ruby-1.9.3-p448/gems/devise-3.1.0/app/views/devise/sessions/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-09-21 22:56:03 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pYQqYs+YZpqT1etaLPiyhG+ys8fZdjWHyxRlQLSGykI=", "user"=>{"email"=>"test_user@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'test_user@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  UPDATE "users" SET "current_sign_in_at" = '2013-09-22 02:56:03.401548', "sign_in_count" = 2, "updated_at" = '2013-09-22 02:56:03.402843' WHERE "users"."id" = 1
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 145ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-21 22:56:03 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered static_pages/home.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 23ms (Views: 22.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-21 22:56:31 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered static_pages/home.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-21 22:57:33 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered static_pages/home.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2013-09-21 22:58:13 -0400
+Processing by ListingsController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError - uninitialized constant ListingsController::Project:
+  activesupport (3.2.14) lib/active_support/dependencies.rb:520:in `load_missing_constant'
+  activesupport (3.2.14) lib/active_support/dependencies.rb:192:in `block in const_missing'
+  activesupport (3.2.14) lib/active_support/dependencies.rb:190:in `const_missing'
+  app/controllers/listings_controller.rb:3:in `index'
+  actionpack (3.2.14) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:414:in `_run__4515777639531846627__process_action__2189852624648231677__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.14) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.14) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.14) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.14) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `_run__1146977630105316190__call__3571399315102009715__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (1.0.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.0.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.0.1) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.14) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.14) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.14) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.14) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `<main>'
+  script/rails:0:in `<main>'
+
+
+
+Started POST "/__better_errors/2180621780/variables" for 127.0.0.1 at 2013-09-21 22:58:13 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-21 22:58:19 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered static_pages/home.html.erb within layouts/application (75.8ms)
+Completed 200 OK in 101ms (Views: 98.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-21 22:59:23 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered static_pages/home.html.erb within layouts/application (74.8ms)
+Completed 200 OK in 98ms (Views: 96.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2013-09-21 22:59:25 -0400
+Processing by ListingsController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError - uninitialized constant ListingsController::Project:
+  activesupport (3.2.14) lib/active_support/dependencies.rb:520:in `load_missing_constant'
+  activesupport (3.2.14) lib/active_support/dependencies.rb:192:in `block in const_missing'
+  activesupport (3.2.14) lib/active_support/dependencies.rb:190:in `const_missing'
+  app/controllers/listings_controller.rb:6:in `index'
+  actionpack (3.2.14) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:414:in `_run__4515777639531846627__process_action__2189852624648231677__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.14) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.14) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.14) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.14) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `_run__1146977630105316190__call__3571399315102009715__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (1.0.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.0.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.0.1) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.14) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.14) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.14) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.14) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `<main>'
+  script/rails:0:in `<main>'
+
+
+
+Started POST "/__better_errors/2185668060/variables" for 127.0.0.1 at 2013-09-21 22:59:26 -0400
+
+
+Started GET "/listings" for 127.0.0.1 at 2013-09-21 22:59:57 -0400
+Processing by ListingsController#index as HTML
+  [1m[36mListing Load (0.2ms)[0m  [1mSELECT "listings".* FROM "listings" [0m
+  Rendered listings/index.html.erb within layouts/application (3.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 198ms (Views: 169.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/listings?res_type=%22Single%22" for 127.0.0.1 at 2013-09-21 23:00:13 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"res_type"=>"\"Single\""}
+  [1m[36mListing Load (0.4ms)[0m  [1mSELECT "listings".* FROM "listings" [0m
+  Rendered listings/index.html.erb within layouts/application (2.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/listings?res_type=%22Multi%22" for 127.0.0.1 at 2013-09-21 23:00:18 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"res_type"=>"\"Multi\""}
+  [1m[36mListing Load (0.3ms)[0m  [1mSELECT "listings".* FROM "listings" [0m
+  Rendered listings/index.html.erb within layouts/application (2.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/listings?res_type=%22Multi%22" for 127.0.0.1 at 2013-09-21 23:01:25 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"res_type"=>"\"Multi\""}
+  [1m[36mListing Load (0.2ms)[0m  [1mSELECT "listings".* FROM "listings" [0m
+  Rendered listings/index.html.erb within layouts/application (5.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 130ms (Views: 100.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2013-09-21 23:01:31 -0400
+Processing by ListingsController#index as HTML
+  [1m[36mListing Load (0.3ms)[0m  [1mSELECT "listings".* FROM "listings" [0m
+  Rendered listings/index.html.erb within layouts/application (3.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-21 23:01:34 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered static_pages/home.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-21 23:05:37 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered static_pages/home.html.erb within layouts/application (155.5ms)
+Completed 200 OK in 178ms (Views: 176.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-21 23:06:36 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered static_pages/home.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2013-09-21 23:06:38 -0400
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.2ms)[0m  SELECT "listings".* FROM "listings" 
+  Rendered listings/index.html.erb within layouts/application (5.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 59ms (Views: 30.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/listings?utf8=%E2%9C%93&search=1" for 127.0.0.1 at 2013-09-21 23:06:50 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"1"}
+  [1m[35mLocation Load (0.4ms)[0m  SELECT locations.*, (69.09332411348201 * ABS(locations.latitude - 22.321702) * 0.7071067811865475) + (59.836573914187355 * ABS(locations.longitude - 114.177987) * 0.7071067811865475) AS distance, CASE WHEN (locations.latitude >= 22.321702 AND locations.longitude >= 114.177987) THEN 45.0 WHEN (locations.latitude < 22.321702 AND locations.longitude >= 114.177987) THEN 135.0 WHEN (locations.latitude < 22.321702 AND locations.longitude < 114.177987) THEN 225.0 WHEN (locations.latitude >= 22.321702 AND locations.longitude < 114.177987) THEN 315.0 END AS bearing FROM "locations" WHERE (locations.latitude BETWEEN 21.59804308444576 AND 23.045360915554237 AND locations.longitude BETWEEN 113.39570879033091 AND 114.96026520966909) ORDER BY distance
+  Rendered listings/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 245ms (Views: 24.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/listings?utf8=%E2%9C%93&search=08901" for 127.0.0.1 at 2013-09-21 23:06:58 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"08901"}
+  [1m[35mLocation Load (0.5ms)[0m  SELECT locations.*, (69.09332411348201 * ABS(locations.latitude - 40.4862157) * 0.7071067811865475) + (59.836573914187355 * ABS(locations.longitude - -74.4518188) * 0.7071067811865475) AS distance, CASE WHEN (locations.latitude >= 40.4862157 AND locations.longitude >= -74.4518188) THEN 45.0 WHEN (locations.latitude < 40.4862157 AND locations.longitude >= -74.4518188) THEN 135.0 WHEN (locations.latitude < 40.4862157 AND locations.longitude < -74.4518188) THEN 225.0 WHEN (locations.latitude >= 40.4862157 AND locations.longitude < -74.4518188) THEN 315.0 END AS bearing FROM "locations" WHERE (locations.latitude BETWEEN 39.76255678444576 AND 41.20987461555424 AND locations.longitude BETWEEN -75.40329775370148 AND -73.50033984629852) ORDER BY distance
+  [1m[36mListing Load (0.3ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."id" = 1 LIMIT 1[0m
+  Rendered listings/index.html.erb within layouts/application (3.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 193ms (Views: 26.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/listings/1" for 127.0.0.1 at 2013-09-21 23:07:05 -0400
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mListing Load (0.3ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mLocation Load (0.3ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."listing_id" = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered listings/show.html.erb within layouts/application (13.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 38ms (Views: 34.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2013-09-21 23:07:08 -0400
+Processing by ListingsController#index as HTML
+  [1m[36mListing Load (0.3ms)[0m  [1mSELECT "listings".* FROM "listings" [0m
+  Rendered listings/index.html.erb within layouts/application (2.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-21 23:07:10 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered static_pages/home.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 22ms (Views: 21.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-21 23:10:37 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered static_pages/home.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 26ms (Views: 25.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-21 23:10:54 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered static_pages/home.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 24ms (Views: 23.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2013-09-21 23:11:00 -0400
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.3ms)[0m  SELECT "listings".* FROM "listings" 
+  Rendered listings/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/listings?utf8=%E2%9C%93&search=78217" for 127.0.0.1 at 2013-09-21 23:11:15 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"78217"}
+  [1m[35mLocation Load (0.5ms)[0m  SELECT locations.*, (69.09332411348201 * ABS(locations.latitude - 29.53896599999999) * 0.7071067811865475) + (59.836573914187355 * ABS(locations.longitude - -98.42390549999999) * 0.7071067811865475) AS distance, CASE WHEN (locations.latitude >= 29.53896599999999 AND locations.longitude >= -98.42390549999999) THEN 45.0 WHEN (locations.latitude < 29.53896599999999 AND locations.longitude >= -98.42390549999999) THEN 135.0 WHEN (locations.latitude < 29.53896599999999 AND locations.longitude < -98.42390549999999) THEN 225.0 WHEN (locations.latitude >= 29.53896599999999 AND locations.longitude < -98.42390549999999) THEN 315.0 END AS bearing FROM "locations" WHERE (locations.latitude BETWEEN 28.815307084445752 AND 30.26262491555423 AND locations.longitude BETWEEN -99.25567765752132 AND -97.59213334247866) ORDER BY distance
+  Rendered listings/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 93ms (Views: 22.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/listings?utf8=%E2%9C%93&search=new+brunswicj" for 127.0.0.1 at 2013-09-21 23:11:24 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"new brunswicj"}
+  [1m[35mLocation Load (0.5ms)[0m  SELECT locations.*, (69.09332411348201 * ABS(locations.latitude - 40.4862157) * 0.7071067811865475) + (59.836573914187355 * ABS(locations.longitude - -74.4518188) * 0.7071067811865475) AS distance, CASE WHEN (locations.latitude >= 40.4862157 AND locations.longitude >= -74.4518188) THEN 45.0 WHEN (locations.latitude < 40.4862157 AND locations.longitude >= -74.4518188) THEN 135.0 WHEN (locations.latitude < 40.4862157 AND locations.longitude < -74.4518188) THEN 225.0 WHEN (locations.latitude >= 40.4862157 AND locations.longitude < -74.4518188) THEN 315.0 END AS bearing FROM "locations" WHERE (locations.latitude BETWEEN 39.76255678444576 AND 41.20987461555424 AND locations.longitude BETWEEN -75.40329775370148 AND -73.50033984629852) ORDER BY distance
+  [1m[36mListing Load (0.2ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."id" = 1 LIMIT 1[0m
+  Rendered listings/index.html.erb within layouts/application (2.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 123ms (Views: 24.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/listings?utf8=%E2%9C%93&search=new+brunswick" for 127.0.0.1 at 2013-09-21 23:11:27 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"new brunswick"}
+  [1m[36mLocation Load (0.5ms)[0m  [1mSELECT locations.*, (69.09332411348201 * ABS(locations.latitude - 40.4862157) * 0.7071067811865475) + (59.836573914187355 * ABS(locations.longitude - -74.4518188) * 0.7071067811865475) AS distance, CASE WHEN (locations.latitude >= 40.4862157 AND locations.longitude >= -74.4518188) THEN 45.0 WHEN (locations.latitude < 40.4862157 AND locations.longitude >= -74.4518188) THEN 135.0 WHEN (locations.latitude < 40.4862157 AND locations.longitude < -74.4518188) THEN 225.0 WHEN (locations.latitude >= 40.4862157 AND locations.longitude < -74.4518188) THEN 315.0 END AS bearing FROM "locations" WHERE (locations.latitude BETWEEN 39.76255678444576 AND 41.20987461555424 AND locations.longitude BETWEEN -75.40329775370148 AND -73.50033984629852) ORDER BY distance[0m
+  [1m[35mListing Load (0.2ms)[0m  SELECT "listings".* FROM "listings" WHERE "listings"."id" = 1 LIMIT 1
+  Rendered listings/index.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 97ms (Views: 24.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-22 00:54:08 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 20.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-22 00:54:37 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered static_pages/home.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 109ms (Views: 108.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2013-09-22 00:54:38 -0400
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.3ms)[0m  SELECT "listings".* FROM "listings" 
+  Rendered listings/index.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 31ms (Views: 28.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/listings/new" for 127.0.0.1 at 2013-09-22 00:54:43 -0400
+Processing by ListingsController#new as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  Rendered listings/_form.html.erb (15.0ms)
+  Rendered listings/new.html.erb within layouts/application (16.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 41ms (Views: 39.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2013-09-22 00:57:05 -0400
+Processing by ListingsController#index as HTML
+  [1m[36mListing Load (0.3ms)[0m  [1mSELECT "listings".* FROM "listings" [0m
+  Rendered listings/index.html.erb within layouts/application (4.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2013-09-22 00:57:59 -0400
+Processing by ListingsController#index as HTML
+  [1m[36mListing Load (0.8ms)[0m  [1mSELECT "listings".* FROM "listings" [0m
+  Rendered listings/index.html.erb within layouts/application (6.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 114ms (Views: 109.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2013-09-22 00:59:04 -0400
+Processing by ListingsController#index as HTML
+  [1m[36mListing Load (0.3ms)[0m  [1mSELECT "listings".* FROM "listings" [0m
+  Rendered listings/index.html.erb within layouts/application (4.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2013-09-22 00:59:13 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mListing Load (0.3ms)[0m  SELECT "listings".* FROM "listings" WHERE "listings"."user_id" = 1
+  Rendered users/show.html.erb within layouts/application (7.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 34ms (Views: 30.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/listings/1" for 127.0.0.1 at 2013-09-22 00:59:18 -0400
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mListing Load (0.2ms)[0m  SELECT "listings".* FROM "listings" WHERE "listings"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."listing_id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered listings/show.html.erb within layouts/application (6.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2013-09-22 00:59:21 -0400
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.3ms)[0m  SELECT "listings".* FROM "listings" 
+  Rendered listings/index.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-22 00:59:22 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered static_pages/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-22 01:02:06 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered static_pages/home.html.erb within layouts/application (149.0ms)
+Completed 200 OK in 172ms (Views: 170.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2013-09-22 01:02:07 -0400
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.2ms)[0m  SELECT "listings".* FROM "listings" 
+  Rendered listings/index.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 56ms (Views: 29.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/listings.json" for 127.0.0.1 at 2013-09-22 01:02:13 -0400
+Processing by ListingsController#index as JSON
+  [1m[35mListing Load (0.3ms)[0m  SELECT "listings".* FROM "listings" 
+Completed 200 OK in 8ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/listings.xml" for 127.0.0.1 at 2013-09-22 01:02:18 -0400
+Processing by ListingsController#index as XML
+  [1m[36mListing Load (0.3ms)[0m  [1mSELECT "listings".* FROM "listings" [0m
+Completed 200 OK in 158ms (Views: 153.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2013-09-22 01:02:23 -0400
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.3ms)[0m  SELECT "listings".* FROM "listings" 
+  Rendered listings/index.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/listings?utf8=%E2%9C%93&search=08901" for 127.0.0.1 at 2013-09-22 01:02:28 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"08901"}
+  [1m[35mLocation Load (0.4ms)[0m  SELECT locations.*, (69.09332411348201 * ABS(locations.latitude - 40.4862157) * 0.7071067811865475) + (59.836573914187355 * ABS(locations.longitude - -74.4518188) * 0.7071067811865475) AS distance, CASE WHEN (locations.latitude >= 40.4862157 AND locations.longitude >= -74.4518188) THEN 45.0 WHEN (locations.latitude < 40.4862157 AND locations.longitude >= -74.4518188) THEN 135.0 WHEN (locations.latitude < 40.4862157 AND locations.longitude < -74.4518188) THEN 225.0 WHEN (locations.latitude >= 40.4862157 AND locations.longitude < -74.4518188) THEN 315.0 END AS bearing FROM "locations" WHERE (locations.latitude BETWEEN 39.76255678444576 AND 41.20987461555424 AND locations.longitude BETWEEN -75.40329775370148 AND -73.50033984629852) ORDER BY distance
+  [1m[36mListing Load (0.3ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."id" = 1 LIMIT 1[0m
+  Rendered listings/index.html.erb within layouts/application (3.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 471ms (Views: 26.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/listings?utf8=%E2%9C%93&search=08902" for 127.0.0.1 at 2013-09-22 01:02:35 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"08902"}
+  [1m[36mLocation Load (0.5ms)[0m  [1mSELECT locations.*, (69.09332411348201 * ABS(locations.latitude - 40.4430064) * 0.7071067811865475) + (59.836573914187355 * ABS(locations.longitude - -74.4818698) * 0.7071067811865475) AS distance, CASE WHEN (locations.latitude >= 40.4430064 AND locations.longitude >= -74.4818698) THEN 45.0 WHEN (locations.latitude < 40.4430064 AND locations.longitude >= -74.4818698) THEN 135.0 WHEN (locations.latitude < 40.4430064 AND locations.longitude < -74.4818698) THEN 225.0 WHEN (locations.latitude >= 40.4430064 AND locations.longitude < -74.4818698) THEN 315.0 END AS bearing FROM "locations" WHERE (locations.latitude BETWEEN 39.71934748444576 AND 41.16666531555424 AND locations.longitude BETWEEN -75.43273686869605 AND -73.53100273130394) ORDER BY distance[0m
+  [1m[35mListing Load (0.2ms)[0m  SELECT "listings".* FROM "listings" WHERE "listings"."id" = 1 LIMIT 1
+  Rendered listings/index.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 104ms (Views: 24.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/listings?utf8=%E2%9C%93&search=08905" for 127.0.0.1 at 2013-09-22 01:02:38 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"08905"}
+  [1m[35mLocation Load (0.4ms)[0m  SELECT locations.*, (69.09332411348201 * ABS(locations.latitude - 41.3694303) * 0.7071067811865475) + (59.836573914187355 * ABS(locations.longitude - 2.1082083) * 0.7071067811865475) AS distance, CASE WHEN (locations.latitude >= 41.3694303 AND locations.longitude >= 2.1082083) THEN 45.0 WHEN (locations.latitude < 41.3694303 AND locations.longitude >= 2.1082083) THEN 135.0 WHEN (locations.latitude < 41.3694303 AND locations.longitude < 2.1082083) THEN 225.0 WHEN (locations.latitude >= 41.3694303 AND locations.longitude < 2.1082083) THEN 315.0 END AS bearing FROM "locations" WHERE (locations.latitude BETWEEN 40.64577138444576 AND 42.09308921555424 AND locations.longitude BETWEEN 1.1439260586413798 AND 3.07249054135862) ORDER BY distance
+  Rendered listings/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 101ms (Views: 21.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/listings?utf8=%E2%9C%93&search=08905.json" for 127.0.0.1 at 2013-09-22 01:02:43 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"08905.json"}
+  [1m[35mLocation Load (0.2ms)[0m  SELECT locations.*, NULL AS distance, NULL AS bearing FROM "locations" WHERE (0)
+  Rendered listings/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 89ms (Views: 22.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/listings.json?utf8=%E2%9C%93&search=08905" for 127.0.0.1 at 2013-09-22 01:02:53 -0400
+Processing by ListingsController#index as JSON
+  Parameters: {"utf8"=>"✓", "search"=>"08905"}
+  [1m[35mLocation Load (0.4ms)[0m  SELECT locations.*, (69.09332411348201 * ABS(locations.latitude - 41.3694303) * 0.7071067811865475) + (59.836573914187355 * ABS(locations.longitude - 2.1082083) * 0.7071067811865475) AS distance, CASE WHEN (locations.latitude >= 41.3694303 AND locations.longitude >= 2.1082083) THEN 45.0 WHEN (locations.latitude < 41.3694303 AND locations.longitude >= 2.1082083) THEN 135.0 WHEN (locations.latitude < 41.3694303 AND locations.longitude < 2.1082083) THEN 225.0 WHEN (locations.latitude >= 41.3694303 AND locations.longitude < 2.1082083) THEN 315.0 END AS bearing FROM "locations" WHERE (locations.latitude BETWEEN 40.64577138444576 AND 42.09308921555424 AND locations.longitude BETWEEN 1.1439260586413798 AND 3.07249054135862) ORDER BY distance
+Completed 200 OK in 74ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/listings.json?utf8=%E2%9C%93&search=08905" for 127.0.0.1 at 2013-09-22 01:03:02 -0400
+Processing by ListingsController#index as JSON
+  Parameters: {"utf8"=>"✓", "search"=>"08905"}
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT locations.*, (69.09332411348201 * ABS(locations.latitude - 41.3694303) * 0.7071067811865475) + (59.836573914187355 * ABS(locations.longitude - 2.1082083) * 0.7071067811865475) AS distance, CASE WHEN (locations.latitude >= 41.3694303 AND locations.longitude >= 2.1082083) THEN 45.0 WHEN (locations.latitude < 41.3694303 AND locations.longitude >= 2.1082083) THEN 135.0 WHEN (locations.latitude < 41.3694303 AND locations.longitude < 2.1082083) THEN 225.0 WHEN (locations.latitude >= 41.3694303 AND locations.longitude < 2.1082083) THEN 315.0 END AS bearing FROM "locations" WHERE (locations.latitude BETWEEN 40.64577138444576 AND 42.09308921555424 AND locations.longitude BETWEEN 1.1439260586413798 AND 3.07249054135862) ORDER BY distance[0m
+Completed 200 OK in 151ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/listings.json?utf8=%E2%9C%93&search=08901" for 127.0.0.1 at 2013-09-22 01:03:11 -0400
+Processing by ListingsController#index as JSON
+  Parameters: {"utf8"=>"✓", "search"=>"08901"}
+  [1m[35mLocation Load (0.5ms)[0m  SELECT locations.*, (69.09332411348201 * ABS(locations.latitude - 40.4862157) * 0.7071067811865475) + (59.836573914187355 * ABS(locations.longitude - -74.4518188) * 0.7071067811865475) AS distance, CASE WHEN (locations.latitude >= 40.4862157 AND locations.longitude >= -74.4518188) THEN 45.0 WHEN (locations.latitude < 40.4862157 AND locations.longitude >= -74.4518188) THEN 135.0 WHEN (locations.latitude < 40.4862157 AND locations.longitude < -74.4518188) THEN 225.0 WHEN (locations.latitude >= 40.4862157 AND locations.longitude < -74.4518188) THEN 315.0 END AS bearing FROM "locations" WHERE (locations.latitude BETWEEN 39.76255678444576 AND 41.20987461555424 AND locations.longitude BETWEEN -75.40329775370148 AND -73.50033984629852) ORDER BY distance
+  [1m[36mListing Load (0.2ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 84ms (Views: 1.1ms | ActiveRecord: 0.0ms)
