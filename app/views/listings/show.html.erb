@@ -1,0 +1,61 @@
+<% title "Listing" %>
+
+<h1><%= @listing.location.address %></h1>
+
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@listing.location.latitude}%2C#{@listing.location.longitude}", :class => "style_image" %>
+
+<p>
+  <strong>User:</strong>
+  <%= @listing.user.email %>
+</p>
+<p>
+  <strong>Res Type:</strong>
+  <%= @listing.res_type %>
+</p>
+<p>
+  <strong>Price:</strong>
+  <%= @listing.price %>
+</p>
+<p>
+  <strong>Bedrooms:</strong>
+  <%= @listing.bedrooms %>
+</p>
+<p>
+  <strong>Bathrooms:</strong>
+  <%= @listing.bathrooms %>
+</p>
+<p>
+  <strong>Home Sqr Foot:</strong>
+  <%= @listing.home_sqr_foot %>
+</p>
+<p>
+  <strong>Lot Sqr Foot:</strong>
+  <%= @listing.lot_sqr_foot %>
+</p>
+<p>
+  <strong>Year Built:</strong>
+  <%= @listing.year_built %>
+</p>
+<p>
+  <strong>Parking Type:</strong>
+  <%= @listing.parking_type %>
+</p>
+<p>
+  <strong>Cooling Type:</strong>
+  <%= @listing.cooling_type %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @listing.description %>
+</p>
+
+<h3>Nearby Listings</h3>
+<% @listing.location.nearbys(10) do |location| %>
+    <li><%= link_to location.address, location %> (<%= location.distance.round(2) %> miles)</li>
+<% end %>
+
+<p>
+  <%= link_to "Edit", edit_listing_path(@listing) %> |
+  <%= link_to "Destroy", @listing, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", listings_path %>
+</p>

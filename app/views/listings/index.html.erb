@@ -1,0 +1,35 @@
+<% title "Listings" %>
+
+<table>
+  <tr>
+    <th>Res Type</th>
+    <th>Price</th>
+    <th>Bedrooms</th>
+    <th>Bathrooms</th>
+    <th>Home Sqr Foot</th>
+    <th>Lot Sqr Foot</th>
+    <th>Year Built</th>
+    <th>Parking Type</th>
+    <th>Cooling Type</th>
+    <th>Description</th>
+  </tr>
+  <% for listing in @listings %>
+    <tr>
+      <td><%= listing.res_type %></td>
+      <td><%= listing.price %></td>
+      <td><%= listing.bedrooms %></td>
+      <td><%= listing.bathrooms %></td>
+      <td><%= listing.home_sqr_foot %></td>
+      <td><%= listing.lot_sqr_foot %></td>
+      <td><%= listing.year_built %></td>
+      <td><%= listing.parking_type %></td>
+      <td><%= listing.cooling_type %></td>
+      <td><%= listing.description %></td>
+      <td><%= link_to "Show", listing %></td>
+      <td><%= link_to "Edit", edit_listing_path(listing) %></td>
+      <td><%= link_to "Destroy", listing, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Listing", new_listing_path %></p>

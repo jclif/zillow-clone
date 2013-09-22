@@ -9,12 +9,16 @@ gem 'sqlite3'
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'devise'
+gem 'geocoder'
+gem 'formtastic'
 
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'thin'
   gem 'letter_opener'
+  gem 'quiet_assets'
+  gem 'nifty-generators'
 end
 
 # Gems used only for assets and not required
@@ -45,3 +49,5 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem "mocha", :group => :test

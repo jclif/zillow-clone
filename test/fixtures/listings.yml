@@ -1,0 +1,23 @@
+one:
+  res_type: MyString
+  price: 1
+  bedrooms: 1
+  bathrooms: 1
+  home_sqr_foot: 1
+  lot_sqr_foot: 1
+  year_built: 1
+  parking_type: MyString
+  cooling_type: MyString
+  description: MyText
+
+two:
+  res_type: MyString
+  price: 1
+  bedrooms: 1
+  bathrooms: 1
+  home_sqr_foot: 1
+  lot_sqr_foot: 1
+  year_built: 1
+  parking_type: MyString
+  cooling_type: MyString
+  description: MyText

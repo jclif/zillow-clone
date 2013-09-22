@@ -1,0 +1,51 @@
+<%= form_for setup_listing(@listing) do |f| %>
+    <%= f.error_messages %>
+  <p>
+  <%= f.fields_for :location do |ff| %>
+    <p>
+      <%= ff.label :address %>
+      <%= ff.text_field :address %>
+    </p>
+  <% end %>
+  <p>
+    <%= f.label :res_type %><br />
+    <%= select(:listing, :res_type, Listing.res_options) %>
+  </p>
+  <p>
+    <%= f.label :price %><br />
+    <%= f.number_field :price %>
+  </p>
+  <p>
+    <%= f.label :bedrooms %><br />
+    <%= f.number_field :bedrooms %>
+  </p>
+  <p>
+    <%= f.label :bathrooms %><br />
+    <%= f.number_field :bathrooms %>
+  </p>
+  <p>
+    <%= f.label :home_sqr_foot %><br />
+    <%= f.number_field :home_sqr_foot %>
+  </p>
+  <p>
+    <%= f.label :lot_sqr_foot %><br />
+    <%= f.number_field :lot_sqr_foot %>
+  </p>
+  <p>
+    <%= f.label :year_built %><br />
+    <%= f.number_field :year_built %>
+  </p>
+  <p>
+    <%= f.label :parking_type %><br />
+    <%= select(:listing, :parking_type, Listing.parking_options) %>
+  </p>
+  <p>
+    <%= f.label :cooling_type %><br />
+    <%= select(:listing, :cooling_type, Listing.cooling_options) %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

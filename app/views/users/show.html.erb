@@ -1,5 +1,9 @@
 <h1>Profile</h1>
 
-<%= @user.id %>
-<%= @user.email %>
+<h2>Info</h2>
+<%= p @user.inspect %>
 
+<h2>Listings</h2>
+<% @user.listings.each do |listing| %>
+  <%= link_to "#{p listing.inspect}", listing_url(listing) %>
+<% end %>
