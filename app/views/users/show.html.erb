@@ -3,7 +3,12 @@
 <h2>Info</h2>
 <%= p @user.inspect %>
 
-<h2>Listings</h2>
+<h2>Listings Created</h2>
 <% @user.listings.each do |listing| %>
   <%= link_to "#{p listing.inspect}", listing_url(listing) %>
+<% end %>
+
+<h2>Fovorites Listings</h2>
+<% @user.favorites.each do |favorite| %>
+  <%= link_to "#{p favorite.listing.inspect}", listing_url(favorite.listing) %>
 <% end %>

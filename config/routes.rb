@@ -1,4 +1,6 @@
 ZillowClone::Application.routes.draw do
+  resources :favorites
+
   resources :listings
 
   devise_for :users
