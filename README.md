@@ -1,9 +1,16 @@
 zillow-clone
 ============
 
-A clone of zillow.
+A a web application with the scandalous aspiration of someday becoming rightfully called a Zillow clone.
 
-Features:
-*user profile with favorites
-*listings with cost, details, location
-*search by zip/city/etc 
+Technologies
+------------
+* devise
+* geocoder
+* bootstrap
+
+Features
+--------
+* user profile with favorites
+* listings with cost, details, location
+* search by zip/city/etc 
