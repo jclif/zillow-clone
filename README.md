@@ -5,8 +5,13 @@ A a web application with the scandalous aspiration of someday becoming rightfull
 
 Technologies
 ------------
-* devise
+* Ruby on Rails
+* HTML/CSS
+
+Gems
+----
 * geocoder
+* devise
 * bootstrap
 
 Features
