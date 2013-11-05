@@ -30,6 +30,4 @@ end
 
 gem 'jquery-rails'
 
-gem "mocha", :group => :test
-
 ruby "1.9.3"
