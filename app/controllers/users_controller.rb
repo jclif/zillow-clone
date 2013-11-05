@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
 
   def show
-    @user = User.find(params[:id])
+    @user = User.select("id, email, last_sign_in_at, created_at").find(params[:id])
   end
-
 end

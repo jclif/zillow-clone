@@ -1,0 +1,24 @@
+<h2>Sign in</h2>
+
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email, :autofocus => true %></div>
+
+  <div><%= f.label :password %><br />
+  <%= f.password_field :password %></div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+  <% end -%>
+
+  <div><%= f.submit "Sign in" %></div>
+<% end %>
+
+<form class="new_user" method="post" action="<%= user_session_url %>">
+  <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token"></input>
+  <input id="user_email" type="hidden" value="GuestUser@example.com" size="30" name="user[email]"></input>
+  <input id="user_password" type="hidden" value="gimmeyohouses" size="30" name="user[password]"></input>
+  <input class="guest-button button button-rounded" type="submit" name="commit" value="Guest Login"></input>
+</form>
+
+<%= render "devise/shared/links" %>
